@@ -1,0 +1,14 @@
+{
+  "name": "iversen-solutions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Norwegian contact-first website for Iversen Solutions",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "start": "node scripts/serve.mjs"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.19"
+  }
+}

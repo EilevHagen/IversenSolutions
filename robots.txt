@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iversensolutions.no/sitemap.xml
