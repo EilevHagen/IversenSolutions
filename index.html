@@ -1,28 +1,167 @@
 <!doctype html>
-<html lang="en">
+<html lang="nb">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="A new website from IversenSolutions."
-    >
-    <meta name="theme-color" content="#f5f7fa">
-    <title>IversenSolutions</title>
+    <meta name="description" content="Trenger du hjelp med service, reparasjon eller vaktmestertjenester i Ålesund? Kontakt Iversen Solutions på 902 63 772 eller post@iversensolutions.no.">
+    <meta name="theme-color" content="#101820">
+    <title>Iversen Solutions | Service, reparasjon og vaktmester i Ålesund</title>
+    <link rel="canonical" href="https://iversensolutions.no/">
+    <meta property="og:locale" content="nb_NO">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Iversen Solutions">
+    <meta property="og:title" content="Iversen Solutions – praktisk hjelp i Ålesund">
+    <meta property="og:description" content="Service, reparasjon og vaktmestertjenester. Ring 902 63 772, så snakker vi om det du trenger hjelp til.">
+    <meta property="og:url" content="https://iversensolutions.no/">
+    <meta property="og:image" content="https://iversensolutions.no/assets/social.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Iversen Solutions – service, reparasjon og vaktmestertjenester">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="app.css">
     <script src="app.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://iversensolutions.no/#company",
+        "name": "Iversen Solutions",
+        "url": "https://iversensolutions.no/",
+        "logo": "https://iversensolutions.no/assets/logo.png",
+        "image": "https://iversensolutions.no/assets/social.jpg",
+        "description": "Service, reparasjon og vaktmestertjenester i Ålesund.",
+        "telephone": "+4790263772",
+        "email": "post@iversensolutions.no",
+        "identifier": "938528403",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Tveraberget 20",
+          "addressLocality": "Ålesund",
+          "addressCountry": "NO"
+        },
+        "areaServed": { "@type": "City", "name": "Ålesund" },
+        "sameAs": ["https://www.facebook.com/p/Iversen-Solutions-61594828174941/"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Tjenester",
+          "itemListElement": [
+            { "@type": "OfferCatalog", "name": "Service" },
+            { "@type": "OfferCatalog", "name": "Reparasjon" },
+            { "@type": "OfferCatalog", "name": "Vaktmestertjenester" }
+          ]
+        }
+      }
+    </script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to main content</a>
+    <a class="skip-link" href="#main">Hopp til hovedinnhold</a>
     <header class="site-header">
-      <a class="site-name" href="./">IversenSolutions</a>
+      <div class="page-width header-layout flex flex-wrap items-center justify-between gap-5">
+        <a class="brand flex items-center gap-3" href="./" aria-label="Iversen Solutions – forsiden">
+          <img src="assets/logo.png" alt="" width="420" height="300" class="brand-mark">
+          <span class="brand-name">IVERSEN<span>SOLUTIONS</span></span>
+        </a>
+        <nav aria-label="Hovedmeny" class="header-nav flex items-center gap-3">
+          <a class="nav-link hidden xl:inline-flex" href="#tjenester">Tjenester</a>
+          <a class="nav-link hidden xl:inline-flex" href="#om-oss">Om oss</a>
+          <a class="header-contact inline-flex items-center justify-center gap-2" href="tel:+4790263772">
+            <svg class="header-icon hidden sm:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m7 3 3 5-2 2a14 14 0 0 0 6 6l2-2 5 3-1 4C10 22 2 14 3 4l4-1Z"/></svg>
+            <span>902 63 772</span>
+          </a>
+          <a class="header-contact inline-flex items-center justify-center gap-2" href="mailto:post@iversensolutions.no">
+            <svg class="header-icon hidden sm:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
+            <span class="xl:hidden">E-post</span><span class="hidden xl:inline">post@iversensolutions.no</span>
+          </a>
+          <a class="header-contact inline-flex items-center justify-center gap-2" href="https://www.facebook.com/p/Iversen-Solutions-61594828174941/" rel="noreferrer">
+            <svg class="header-icon hidden sm:block" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.4A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v8h4Z"/></svg>
+            <span>Facebook</span>
+          </a>
+        </nav>
+      </div>
     </header>
-    <main id="main" class="site-main">
-      <h1>A new site is on its way</h1>
-      <p>This is the starting point. Check back soon for more.</p>
+
+    <main id="main" tabindex="-1">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="page-width hero-grid grid lg:grid-cols-2">
+          <div class="hero-intro">
+            <p class="eyebrow flex items-center gap-2"><span class="location-dot" aria-hidden="true"></span> Praktisk hjelp i Ålesund</p>
+            <h1 id="hero-title">Vi fikser det.<br><span>Du får tid.</span></h1>
+            <p class="hero-description">Service, reparasjon og vaktmestertjenester.<br class="hidden sm:block"> Én lokal kontakt når noe skal ordnes.</p>
+            <a class="text-link hidden lg:inline-flex items-center gap-3" href="#tjenester">Dette kan vi hjelpe med <span aria-hidden="true">↓</span></a>
+          </div>
+
+          <section id="kontakt" class="contact-panel" aria-labelledby="contact-title">
+            <h2 id="contact-title">Send oss en melding</h2>
+            <div class="form-placeholder flex items-center gap-3" id="kontaktskjema">
+              <svg class="contact-icon shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
+              <div><h3>Kontaktskjema kommer</h3><p>Inntil videre bruker du kontaktknappene øverst på siden.</p></div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="tjenester" class="services section-space" aria-labelledby="services-title">
+        <div class="page-width">
+          <div class="section-heading grid md:grid-cols-2 gap-6">
+            <div><p class="eyebrow">Dette gjør vi</p><h2 id="services-title">Når noe skal ordnes.</h2></div>
+            <p class="section-description">Noe som ikke virker? Noe som trenger vedlikehold? Vi hjelper deg med det praktiske, så du kan bruke tiden på andre ting.</p>
+          </div>
+          <div class="service-grid grid md:grid-cols-3">
+            <article class="service-item">
+              <div class="service-top flex items-center justify-between"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m24 5 3 6 7 1 1 7 6 5-6 5-1 7-7 1-3 6-3-6-7-1-1-7-6-5 6-5 1-7 7-1 3-6Z"/><circle cx="24" cy="24" r="7"/></svg></div>
+              <h3>Service</h3>
+              <p>Litt oppfølging kan gjøre en stor forskjell. Ta kontakt om service og vedlikehold, så finner vi ut hva du trenger.</p>
+            </article>
+            <article class="service-item">
+              <div class="service-top flex items-center justify-between"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M29 8a11 11 0 0 0-13 14L5 33a6 6 0 0 0 9 9l12-12A11 11 0 0 0 40 17l-8 8-7-7 8-8-4-2Z"/><circle cx="10" cy="37" r="1.5"/></svg></div>
+              <h3>Reparasjon</h3>
+              <p>Det er ikke alltid nødvendig å bytte ut. Fortell oss hva som har gått i stykker, så avklarer vi om vi kan hjelpe.</p>
+            </article>
+            <article class="service-item">
+              <div class="service-top flex items-center justify-between"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m5 22 19-16 19 16M10 19v23h28V19M19 42V28h10v14"/><path d="M31 11V6h6v10"/></svg></div>
+              <h3>Vaktmestertjenester</h3>
+              <p>En lokal kontakt for praktiske oppgaver og vedlikehold av eiendom. Vi avtaler omfanget ut fra det du trenger hjelp til.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="om-oss" class="about section-space" aria-labelledby="about-title">
+        <div class="page-width about-grid grid md:grid-cols-2 gap-10">
+          <div class="about-brand flex items-center justify-center" aria-hidden="true">
+            <span class="brand-cross cross-top">+</span>
+            <img src="assets/logo.png" alt="" width="420" height="300" loading="lazy">
+            <span class="brand-cross cross-bottom">+</span>
+            <span class="brand-caption">LOKALT FORANKRET. PRAKTISK ANLAGT.</span>
+          </div>
+          <div class="about-copy">
+            <p class="eyebrow">Din lokale problemløser</p>
+            <h2 id="about-title">Nær deg.<br>Klar for oppgaven.</h2>
+            <p>Iversen Solutions holder til på Tveraberget i Ålesund. Vi tilbyr service, reparasjon og vaktmestertjenester, med én enkel vei til kontakt.</p>
+            <p>Ingen oppgave er lik. Derfor starter vi med en prat om hva du trenger, og avtaler veien videre sammen.</p>
+            <a class="facebook-link inline-flex items-center gap-3" href="https://www.facebook.com/p/Iversen-Solutions-61594828174941/" rel="noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.4A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v8h4Z"/></svg><span>Følg hverdagen vår på Facebook</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="page-width flex flex-col md:flex-row md:items-center justify-between gap-7">
+          <div><p class="eyebrow">Det begynner med en prat</p><h2 id="closing-title">Skal vi få det gjort?</h2></div>
+          <a class="closing-phone inline-flex items-center gap-6" href="tel:+4790263772">Ring 902 63 772 <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
     </main>
+
     <footer class="site-footer">
-      <p>&copy; <span id="current-year"></span> IversenSolutions</p>
+      <div class="page-width">
+        <div class="footer-top grid gap-8 md:grid-cols-3">
+          <div><a class="footer-name" href="./">Iversen Solutions</a><p>Service · Reparasjon · Vaktmestertjenester</p></div>
+          <address><span class="footer-label">Her finner du oss</span>Tveraberget 20<br>Ålesund, Norge</address>
+          <div><span class="footer-label">Ta kontakt</span><a href="tel:+4790263772">902 63 772</a><br><a href="mailto:post@iversensolutions.no">post@iversensolutions.no</a></div>
+        </div>
+        <div class="footer-bottom flex flex-wrap justify-between gap-4"><p>© <span id="current-year">2026</span> Iversen Solutions <span class="footer-separator" aria-hidden="true">/</span> Org.nr. 938 528 403</p><a href="#main">Til toppen <span aria-hidden="true">↑</span></a></div>
+      </div>
     </footer>
   </body>
 </html>
