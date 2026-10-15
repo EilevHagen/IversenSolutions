@@ -26,14 +26,24 @@ test('ContactPanel_ContainsAccessibleWeb3FormsContactForm', async () => {
   assert.match(panel, /name="name"[^>]*required/);
   assert.match(panel, /name="phone"/);
   assert.match(panel, /name="email"/);
-  assert.match(panel, /name="message"[^>]*required/);
-  assert.match(panel, /class="h-captcha" data-captcha="true"/);
+  assert.match(panel, /name="message"[^>]*rows="2" required/);
+  assert.match(panel, /id="contact-captcha-overlay"[\s\S]*?role="dialog"[\s\S]*?aria-hidden="true"[\s\S]*?inert/);
+  assert.match(panel, /class="h-captcha"[\s\S]*?data-captcha="true"[\s\S]*?data-callback="onContactCaptchaSolved"/);
   assert.match(panel, /id="contact-success"[\s\S]*?role="status"/);
   assert.match(panel, /id="contact-success-close" type="button"/);
   assert.doesNotMatch(panel, /\(påkrevd\)|\(valgfri\)/);
   assert.match(script, /contactForm\.classList\.add\("is-success"\)/);
   assert.match(script, /contactForm\.classList\.remove\("is-success"\)/);
+  assert.match(script, /setCaptchaOverlayOpen\(true\)/);
+  assert.match(script, /window\.onContactCaptchaSolved = async \(token\) =>/);
   assert.match(styles, /\.contact-success \{ position: absolute; inset: 0;/);
+  assert.match(styles, /\.contact-captcha-overlay \{ position: absolute; inset: 0;/);
+  assert.match(html, /class="facebook-link-label"/);
+  assert.match(styles, /\.facebook-link-label \{ text-decoration: underline; \}/);
+  assert.match(styles, /\.facebook-link:hover \{ text-decoration: none; \}/);
+  assert.match(styles, /\.closing-phone:hover \{ background: #e8f5fc; text-decoration: none; \}/);
+  assert.match(styles, /\.form-status:empty \{ display: none; \}/);
+  assert.doesNotMatch(styles, /textarea\.form-control \{ min-height: 110px/);
   assert.match(html, /src="https:\/\/web3forms\.com\/client\/script\.js"/);
 });
 

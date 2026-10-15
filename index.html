@@ -135,13 +135,35 @@
                 </div>
                 <div class="form-field">
                   <label for="contact-message">Melding</label>
-                  <textarea class="form-control" name="message" id="contact-message" rows="4" required></textarea>
-                </div>
-                <div class="captcha-field">
-                  <div class="h-captcha" data-captcha="true" data-size="compact"></div>
+                  <textarea class="form-control" name="message" id="contact-message" rows="2" required></textarea>
                 </div>
                 <button class="contact-submit" type="submit">Send melding</button>
                 <p class="form-status" id="contact-status" role="status" aria-live="polite" aria-atomic="true"></p>
+              </div>
+              <div
+                class="contact-captcha-overlay"
+                id="contact-captcha-overlay"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="contact-captcha-title"
+                aria-hidden="true"
+                inert
+              >
+                <div class="contact-captcha-dialog">
+                  <h3 id="contact-captcha-title">Bekreft at du ikke er en robot</h3>
+                  <div class="captcha-field">
+                    <div
+                      class="h-captcha"
+                      data-captcha="true"
+                      data-size="compact"
+                      data-callback="onContactCaptchaSolved"
+                      data-expired-callback="onContactCaptchaExpired"
+                      data-error-callback="onContactCaptchaError"
+                    ></div>
+                  </div>
+                  <p class="captcha-status" id="contact-captcha-status" role="status" aria-live="polite"></p>
+                  <button class="captcha-cancel" id="contact-captcha-cancel" type="button">Avbryt</button>
+                </div>
               </div>
               <section
                 class="contact-success"
@@ -205,7 +227,7 @@
             <h2 id="about-title">Nær deg.<br>Klar for oppgaven.</h2>
             <p>Iversen Solutions holder til på Tveraberget i Ålesund. Vi tilbyr service, reparasjon og vaktmestertjenester, med én enkel vei til kontakt.</p>
             <p>Ingen oppgave er lik. Derfor starter vi med en prat om hva du trenger, og avtaler veien videre sammen.</p>
-            <a class="facebook-link inline-flex items-center gap-3" href="https://www.facebook.com/p/Iversen-Solutions-61594828174941/" rel="noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.4A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v8h4Z"/></svg><span>Følg hverdagen vår på Facebook</span><span aria-hidden="true">↗</span></a>
+            <a class="facebook-link inline-flex items-center gap-3" href="https://www.facebook.com/p/Iversen-Solutions-61594828174941/" rel="noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.4A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v8h4Z"/></svg><span class="facebook-link-label">Følg hverdagen vår på Facebook <span aria-hidden="true">↗</span></span></a>
           </div>
         </div>
       </section>
