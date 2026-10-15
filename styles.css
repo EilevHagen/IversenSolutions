@@ -53,10 +53,30 @@
   .hero a:focus-visible, .site-header a:focus-visible, .site-footer a:focus-visible { outline-color: #7dceff; }
   .contact-panel { padding: 29px 32px 26px; border-top: 3px solid #0075b9; border-radius: 3px; background: #f4f5f5; color: #101820; }
   .contact-panel h2 { font-size: 25px; line-height: 1.25; letter-spacing: -.035em; }
-  .contact-icon { width: 22px; height: 22px; color: #4b5964; }
-  .form-placeholder { min-height: 220px; margin-top: 22px; border: 1px dashed #8996a0; padding: 24px; border-radius: 3px; }
-  .form-placeholder h3 { font-size: 16px; line-height: 1.5; }
-  .form-placeholder p { margin-top: 6px; color: #4b5964; font-size: 13px; line-height: 1.55; }
+  .contact-form { position: relative; margin-top: 22px; }
+  .contact-form-content { display: grid; gap: 15px; }
+  .contact-form.is-success .contact-form-content { visibility: hidden; }
+  .contact-success { position: absolute; inset: 0; z-index: 1; display: grid; align-content: center; justify-items: center; gap: 18px; padding: 32px 24px; border-radius: 3px; background: #fff; color: #101820; text-align: center; }
+  .contact-success[hidden] { display: none; }
+  .contact-success:focus-visible { outline: 3px solid #0075b9; outline-offset: 3px; }
+  .success-icon { width: 64px; height: 64px; color: #155724; }
+  .contact-success h3 { font-size: clamp(24px, 3vw, 34px); line-height: 1.2; letter-spacing: -.035em; }
+  .contact-success p { max-width: 32rem; color: #4b5964; font-size: 15px; line-height: 1.7; }
+  .success-close { min-height: 48px; padding: 12px 18px; border: 1px solid #0075b9; border-radius: 3px; color: #005d91; font-weight: 700; }
+  .success-close:hover { background: #e8f5fc; }
+  .success-close:focus-visible { outline: 3px solid #0075b9; outline-offset: 3px; }
+  .form-field { display: grid; gap: 6px; }
+  .form-field label { font-size: 13px; font-weight: 700; }
+  .form-control { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #8996a0; border-radius: 3px; background: #fff; color: #101820; }
+  textarea.form-control { min-height: 110px; resize: vertical; }
+  .form-control:focus-visible, .contact-submit:focus-visible { outline: 3px solid #0075b9; outline-offset: 2px; }
+  .field-hint { color: #4b5964; font-size: 12px; line-height: 1.5; }
+  .captcha-field { overflow-x: auto; }
+  .contact-submit { display: inline-flex; align-items: center; justify-content: center; width: 100%; min-height: 48px; padding: 12px 18px; border-radius: 3px; background: #0075b9; color: #fff; font-weight: 700; }
+  .contact-submit:hover:not(:disabled) { background: #00649e; }
+  .contact-submit:disabled { opacity: .7; }
+  .form-status { min-height: 1.5em; color: #4b5964; font-size: 13px; line-height: 1.5; }
+  .form-status[data-state="error"] { color: #9c1c1c; }
   .section-space { padding-block: 85px; }
   .services { background: #f4f5f5; }
   .section-heading { align-items: end; margin-bottom: 48px; }
@@ -125,8 +145,8 @@
   .hero-description { font-size: 13px; line-height: 1.6; }
   .contact-panel { padding: 18px 20px; }
   .contact-panel h2 { font-size: 22px; }
-  .form-placeholder { min-height: 100px; margin-top: 16px; padding: 16px; }
-  .form-placeholder h3 { font-size: 14px; }
+  .contact-form { margin-top: 16px; }
+  .contact-form-content { gap: 13px; }
   .section-space { padding-block: 52px; }
   .section-heading { margin-bottom: 28px; gap: 18px; }
   .section-description { justify-self: start; font-size: 14px; }
@@ -152,7 +172,6 @@
   .hero-description { font-size: 12px; }
   .contact-panel { padding: 14px; }
   .contact-panel h2 { font-size: 20px; }
-  .form-placeholder { padding: 9px; }
   .brand { gap: 8px; }
 }
 
@@ -161,7 +180,7 @@
 }
 
 @media (forced-colors: active) {
-  .contact-panel, .form-placeholder, .header-contact, .closing-phone { border: 1px solid CanvasText; }
+  .contact-panel, .form-control, .success-close, .header-contact, .closing-phone { border: 1px solid CanvasText; }
 }
 
 @media print {
@@ -170,6 +189,6 @@
   .hero a, .hero p, .hero h1 > span, .site-header a, .site-footer a { color: black; }
   .hero-grid { display: block; padding-block: 20px; }
   .contact-panel { margin-top: 20px; break-inside: avoid; }
-  .about-brand, nav, .form-placeholder, .closing, .text-link { display: none; }
+  .about-brand, nav, .contact-form, .closing, .text-link { display: none; }
   .section-space { padding-block: 25px; }
 }

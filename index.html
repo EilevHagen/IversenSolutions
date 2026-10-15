@@ -93,10 +93,75 @@
 
           <section id="kontakt" class="contact-panel" aria-labelledby="contact-title">
             <h2 id="contact-title">Send oss en melding</h2>
-            <div class="form-placeholder flex items-center gap-3" id="kontaktskjema">
-              <svg class="contact-icon shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
-              <div><h3>Kontaktskjema kommer</h3><p>Inntil videre bruker du kontaktknappene øverst på siden.</p></div>
-            </div>
+            <form
+              class="contact-form"
+              id="contact-form"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              aria-busy="false"
+              aria-labelledby="contact-title"
+            >
+              <input type="hidden" name="access_key" value="21e9d292-4ee9-47b6-ab86-dcffbec73249">
+              <input type="hidden" name="subject" value="Ny melding fra kontaktskjema">
+              <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
+
+              <div class="contact-form-content" id="contact-form-content">
+                <div class="form-field">
+                  <label for="contact-name">Navn</label>
+                  <input class="form-control" type="text" name="name" id="contact-name" autocomplete="name" required>
+                </div>
+                <div class="form-field">
+                  <label for="contact-phone">Telefonnummer</label>
+                  <input
+                    class="form-control"
+                    type="tel"
+                    name="phone"
+                    id="contact-phone"
+                    autocomplete="tel"
+                    aria-describedby="contact-method-hint"
+                  >
+                </div>
+                <div class="form-field">
+                  <label for="contact-email">E-post</label>
+                  <input
+                    class="form-control"
+                    type="email"
+                    name="email"
+                    id="contact-email"
+                    autocomplete="email"
+                    aria-describedby="contact-method-hint"
+                  >
+                  <p class="field-hint" id="contact-method-hint">Oppgi minst én kontaktmåte: telefonnummer eller e-post.</p>
+                </div>
+                <div class="form-field">
+                  <label for="contact-message">Melding</label>
+                  <textarea class="form-control" name="message" id="contact-message" rows="4" required></textarea>
+                </div>
+                <div class="captcha-field">
+                  <div class="h-captcha" data-captcha="true" data-size="compact"></div>
+                </div>
+                <button class="contact-submit" type="submit">Send melding</button>
+                <p class="form-status" id="contact-status" role="status" aria-live="polite" aria-atomic="true"></p>
+              </div>
+              <section
+                class="contact-success"
+                id="contact-success"
+                role="status"
+                aria-labelledby="contact-success-title"
+                tabindex="-1"
+                hidden
+              >
+                <svg class="success-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="24" cy="24" r="19"></circle>
+                  <path d="m15 24 6 6 12-13"></path>
+                </svg>
+                <h3 id="contact-success-title">Takk for meldingen!</h3>
+                <p id="contact-success-message">Meldingen er sendt. Vi tar kontakt så snart vi kan.</p>
+                <button class="success-close" id="contact-success-close" type="button">
+                  Lukk og skriv en ny melding
+                </button>
+              </section>
+            </form>
           </section>
         </div>
       </section>
@@ -163,5 +228,6 @@
         <div class="footer-bottom flex flex-wrap justify-between gap-4"><p>© <span id="current-year">2026</span> Iversen Solutions <span class="footer-separator" aria-hidden="true">/</span> Org.nr. 938 528 403</p><a href="#main">Til toppen <span aria-hidden="true">↑</span></a></div>
       </div>
     </footer>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
   </body>
 </html>
