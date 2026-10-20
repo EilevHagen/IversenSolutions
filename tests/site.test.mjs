@@ -116,3 +116,15 @@ test('Services_OmitColumnLinksAndHeroBottomStrip', () => {
   assert.doesNotMatch(services, /<a\b/);
   assert.doesNotMatch(html, /hero-bottom|scroll-arrow|service-link/);
 });
+
+test('Services_ShowFixedPriceTireChangeOffer', () => {
+  const offer = html.match(/<div class="service-offer"[\s\S]*?<p class="service-offer-price"[\s\S]*?<\/p>\s*<\/div>/)[0];
+  assert.doesNotMatch(offer, /Fast pris/i);
+  assert.match(offer, /Dekkskift for personbil/);
+  assert.match(offer, /Skift av sommer- og vinterhjul/);
+  assert.match(offer, /kontroll av dekk og hjul/);
+  assert.match(offer, /tiltrekking med riktig moment/);
+  assert.match(offer, /Mobil service etter avtale/);
+  assert.match(offer, /600,-/);
+  assert.match(offer, /for personbil · inkl\. mva\./);
+});

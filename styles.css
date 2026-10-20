@@ -102,6 +102,11 @@
   .service-top svg { width: 42px; height: 42px; color: #0075b9; }
   .service-item h3 { font-size: clamp(18px, 1.9vw, 24px); letter-spacing: -.035em; }
   .service-item p { margin-top: 14px; margin-bottom: 22px; font-size: 14px; line-height: 1.85; color: #4b5964; }
+  .service-offer { display: grid; grid-template-columns: minmax(180px, 1fr) minmax(0, 2fr) auto; align-items: center; gap: 32px; margin-top: 34px; padding: 24px 0; border-top: 1px solid #bdc7ce; border-bottom: 1px solid #bdc7ce; }
+  .service-offer h3 { font-size: clamp(20px, 2.2vw, 27px); letter-spacing: -.035em; }
+  .service-offer-description { max-width: 560px; color: #4b5964; font-size: 14px; line-height: 1.8; }
+  .service-offer-price { display: grid; justify-items: end; color: #4b5964; font-size: 13px; line-height: 1.5; white-space: nowrap; }
+  .service-offer-price strong { color: #101820; font-size: 32px; line-height: 1.1; }
   .about { background: #fff; }
   .about-grid { align-items: center; column-gap: 90px; }
   .about-brand { position: relative; align-self: stretch; min-height: 330px; background-color: #101820; background-image: linear-gradient(#ffffff06 1px, transparent 1px), linear-gradient(90deg, #ffffff06 1px, transparent 1px); background-size: 40px 40px; border-radius: 3px; }
@@ -169,6 +174,10 @@
   .service-top { margin-bottom: 18px; }
   .service-item h3 { font-size: 24px; }
   .service-item p { margin-block: 10px 13px; }
+  .service-offer { grid-template-columns: 1fr auto; gap: 14px 20px; margin-top: 20px; padding-block: 20px; }
+  .service-offer-description { grid-column: 1 / -1; grid-row: 2; }
+  .service-offer-price { grid-column: 2; grid-row: 1; }
+  .service-offer-price strong { font-size: 28px; }
   .about-brand { min-height: 270px; }
   .about-grid { gap: 32px; }
   .about-copy > p:not(.eyebrow) { margin-top: 18px; }
