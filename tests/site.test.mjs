@@ -92,13 +92,25 @@ test('Production_ContainsOnlySelfHostedRuntimeAssets', async () => {
   const externalScripts = references.filter(value => value.startsWith('https://'));
   const files = references.filter(value => !value.startsWith('https://'));
   assert.deepEqual(externalScripts, ['https://web3forms.com/client/script.js']);
-  assert.deepEqual(files, ['assets/favicon.png', 'app.css', 'app.js', 'assets/logo.png', 'assets/logo.png']);
+  assert.deepEqual(files, ['assets/favicon.png', 'app.css', 'app.js', 'assets/logo.png', 'assets/snomaking.jpg', 'assets/logo.png']);
   for (const file of new Set([...files, 'assets/social.jpg'])) {
     assert.ok((await stat(join('dist', file))).size > 0);
   }
   const css = await readFile(join('dist', 'app.css'), 'utf8');
   assert.doesNotMatch(css, /@tailwind|@import|url\([\s"']*https?:/);
   assert.ok(Buffer.byteLength(css) < 25000, 'CSS must stay below 25 kB uncompressed');
+});
+
+test('SnowRemoval_ShowsAreasPriceAndInterestCall', () => {
+  const snow = html.match(/<section id="snomaking"[\s\S]*?<\/section>/)[0];
+  for (const area of ['Vegsund', 'Myrland', 'Blindheim', 'Flisnes']) {
+    assert.match(snow, new RegExp(`<li>${area}</li>`));
+  }
+  assert.match(snow, /500,-/);
+  assert.match(snow, /eks\. mva\./);
+  assert.match(snow, /Ingen bindingstid/);
+  assert.match(snow, /href="#kontakt"/);
+  assert.match(snow, /<img src="assets\/snomaking\.jpg" alt="[^"]+"/);
 });
 
 test('Seo_HasConsistentCanonicalSitemapAndSocialMetadata', async () => {
