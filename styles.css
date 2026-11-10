@@ -107,6 +107,26 @@
   .service-offer-description { max-width: 560px; color: #4b5964; font-size: 14px; line-height: 1.8; }
   .service-offer-price { display: grid; justify-items: end; color: #4b5964; font-size: 13px; line-height: 1.5; white-space: nowrap; }
   .service-offer-price strong { color: #101820; font-size: 32px; line-height: 1.1; }
+  .snow { background: #101820; color: #f4f5f5; }
+  .snow-grid { align-items: center; column-gap: 90px; }
+  .snow .eyebrow { color: #55baff; }
+  .snow h2 { margin-top: 16px; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.12; letter-spacing: -.045em; }
+  .snow-copy > p:not(.eyebrow) { margin-top: 22px; font-size: 15px; line-height: 1.8; color: #c6d0d9; }
+  .snow-areas { margin-top: 28px; }
+  .snow-areas h3 { font-size: 13px; font-weight: 700; color: #fff; }
+  .snow-areas ul { margin-top: 12px; }
+  .snow-areas li { padding: 7px 13px; border: 1px solid #3a4a57; border-radius: 3px; font-size: 14px; color: #fff; }
+  .snow-areas p { margin-top: 12px; font-size: 13px; color: #c6d0d9; }
+  .snow-offer { margin-top: 30px; padding-block: 22px; border-top: 1px solid #3a4a57; border-bottom: 1px solid #3a4a57; }
+  .snow-price { display: grid; font-size: 13px; line-height: 1.5; color: #c6d0d9; }
+  .snow-price strong { color: #fff; font-size: 36px; line-height: 1.1; }
+  .snow-cta { min-height: 48px; padding: 12px 20px; border-radius: 3px; background: #0075b9; color: #fff; font-weight: 700; text-decoration: none; transition: background-color .16s ease; }
+  .snow-cta:hover { background: #00649e; text-decoration: none; }
+  .snow-cta span { font-size: 18px; }
+  .snow a:focus-visible { outline-color: #7dceff; }
+  .snow-copy > .snow-note { margin-top: 14px; font-size: 12px; line-height: 1.6; }
+  .snow-figure { justify-self: center; width: 100%; max-width: 420px; }
+  .snow-figure img { width: 100%; height: auto; border-radius: 3px; }
   .about { background: #fff; }
   .about-grid { align-items: center; column-gap: 90px; }
   .about-brand { position: relative; align-self: stretch; min-height: 330px; background-color: #101820; background-image: linear-gradient(#ffffff06 1px, transparent 1px), linear-gradient(90deg, #ffffff06 1px, transparent 1px); background-size: 40px 40px; border-radius: 3px; }
@@ -179,6 +199,9 @@
   .service-offer-price { grid-column: 2; grid-row: 1; }
   .service-offer-price strong { font-size: 28px; }
   .about-brand { min-height: 270px; }
+  .snow h2 { margin-top: 12px; }
+  .snow-grid { gap: 32px; }
+  .snow-figure { max-width: 320px; }
   .about-grid { gap: 32px; }
   .about-copy > p:not(.eyebrow) { margin-top: 18px; }
   .closing { padding-block: 35px; }
@@ -202,7 +225,7 @@
 }
 
 @media (forced-colors: active) {
-  .contact-panel, .form-control, .success-close, .header-contact, .closing-phone { border: 1px solid CanvasText; }
+  .contact-panel, .form-control, .success-close, .header-contact, .closing-phone, .snow-cta { border: 1px solid CanvasText; }
 }
 
 @media print {
